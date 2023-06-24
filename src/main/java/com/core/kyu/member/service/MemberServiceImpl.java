@@ -3,6 +3,8 @@ package com.core.kyu.member.service;
 import com.core.kyu.member.Member;
 import com.core.kyu.member.repository.MemberRepository;
 
+import java.util.Optional;
+
 public class MemberServiceImpl implements MemberService{
     private final MemberRepository memberRepository;
     MemberServiceImpl(MemberRepository memberRepository) {
@@ -15,7 +17,7 @@ public class MemberServiceImpl implements MemberService{
     }
 
     @Override
-    public Member findMember(Long memberId) {
+    public Optional<Member> findMember(Long memberId) {
         return memberRepository.findById(memberId);
     }
 }
