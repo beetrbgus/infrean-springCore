@@ -2,10 +2,12 @@ package com.core.kyu.member.service;
 
 import com.core.kyu.member.Member;
 import com.core.kyu.member.repository.MemberRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberServiceImpl implements MemberService{
     private final MemberRepository memberRepository;
     MemberServiceImpl(MemberRepository memberRepository) {

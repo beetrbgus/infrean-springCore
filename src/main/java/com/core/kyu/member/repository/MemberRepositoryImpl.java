@@ -1,6 +1,7 @@
 package com.core.kyu.member.repository;
 
 import com.core.kyu.member.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.List;
@@ -8,6 +9,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Repository
 public class MemberRepositoryImpl implements MemberRepository {
     private static Map<Long, Member> store = new HashMap<>();
     private static Long sequence = 0L;
